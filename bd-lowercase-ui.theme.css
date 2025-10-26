@@ -1,0 +1,222 @@
+/**
+ * @name lowercase ui for betterdiscord
+ * @author thornling
+ * @version 1.0.0
+ * @description makes discord ui lowercase but keeps user and server info normal
+ * @source https://github.com/thornling/lowercase-ui-for-betterdiscord
+ * @updateUrl https://github.com/thornling/lowercase-ui/raw/main/lowercase-ui.theme.css
+ * @note this theme is designed for betterdiscord. 
+ *       install betterdiscord first, then place this file in your themes folder.
+ */
+
+
+/* ui lowercase */
+
+/* app containers and generic ui */
+.appMount, .app-*, .layers-*, .container-*, .content-*, .sidebar-*, .toolbar-*,
+.header-*, .title-*, .subtitle-*, .label-*, .form-*, .settings-*,
+.menu-*, .contextMenu-*, .scroller-*, .tabBar-*, .searchBar-*, .notice-*,
+.toast-*, .breadcrumb-*, .keybind-*, .select-*, .dropdown-*,
+[class*="modal"], [class*="popout"], [class*="panel"], [class*="card"] {
+  text-transform: lowercase !important;
+}
+
+/* controls */
+button, select, [role="button"],
+[class*="button"], [class*="btn"], [class*="cta"],
+[class*="pill"], [class*="chip"],
+[class*="select"], [class*="dropdown"],
+[class*="segmented"], [class*="switch"], [class*="toggle"],
+[class*="radio"], [class*="checkbox"] {
+  text-transform: lowercase !important;
+}
+
+/* headings and labels in settings and panels */
+h1, h2, h3, h4, h5, h6,
+[class*="heading"], [class*="header"], [class*="sectionTitle"],
+[class*="settingItemName"], [class*="settingItemDescription"],
+label, [class*="label"], [class*="subtext"], [class*="helperText"],
+/* field titles */
+.defaultColor__4bd52.text-md\/medium_cf4812.fieldTitle__1fed1,
+/* legend headings */
+.text-lg\/medium_cf4812.legend__7fb92,
+/* semibold headings */
+.text-md\/semibold_cf4812,
+/* semibold small headings */
+.text-sm\/semibold_cf4812,
+/* generic labels */
+.label__5a838,
+/* dropdown values */
+.value__3f413 {
+  text-transform: lowercase !important;
+}
+  
+/* explicit override for settings labels */
+[class*="settings"] .text-md\/medium_cf4812.label__5a838 {
+  text-transform: lowercase !important;
+}
+  
+/* context menus, popouts, and list ui */
+[class*="menu"], [class*="submenu"], [class*="item"], [class*="option"],
+[role="menu"], [role="menuitem"], [role="listbox"], [role="option"] {
+  text-transform: lowercase !important;
+}
+  
+/* toolbars and tabs */
+nav, [role="tablist"], [role="tab"],
+[class*="tabs"], [class*="tabBar"], [class*="toolbar"], [class*="actions"],
+
+/* specific tab bar items */
+.tabBarItem_d6f9e9,
+.guildTabBarItem_d6f9e9,
+.item_aa8da2,
+.brand_aa8da2 {
+  text-transform: lowercase !important;
+}
+  
+/* profile customization buttons */
+[class*="profileCustomizationSection"] button,
+[class*="profileCustomizationSection"] [class*="button"],
+[class*="profileCustomizationSection"] [role="button"],
+[class*="profileCustomizationSection"] .lookFilled-,
+[class*="profileCustomizationSection"] .lookOutlined-,
+.button__201d5 .contents__201d5,
+.lookFilled__201d5 .contents__201d5,
+.colorBrand__201d5 .contents__201d5,
+.sizeSmall__201d5 .contents__201d5,
+.grow__201d5 .contents__201d5 {
+  text-transform: lowercase !important;
+}
+  
+/* settings */
+[class*="settings"], [class*="userSettings"], [class*="guildSettings"] * {
+  text-transform: lowercase !important;
+}
+  
+/* tooltips */
+[class*="tooltip"], [role="tooltip"] {
+  text-transform: lowercase !important;
+}
+  
+/* better discord settings */
+.bd-text-normal,
+.bd-setting-note {
+  text-transform: lowercase !important;
+}
+  
+/* descriptive / body text */
+.text-sm\/medium_cf4812,
+.text-sm\/normal_cf4812,
+.defaultColor__4bd52.text-sm\/normal_cf4812,
+.defaultColor__4bd52.text-sm\/medium_cf4812,
+.defaultColor__4bd52.text-sm\/normal_cf4812.default_ddd181.formText_ddd181.formNoticeBody_f43ba5.modeDefault_ddd181,
+.defaultColor__4bd52.text-sm\/medium_cf4812.giftText_a45ed3,
+/* medium + normal body text */
+.text-md\/medium_cf4812,
+.text-md\/normal_cf4812,
+.defaultColor__4bd52.text-md\/normal_cf4812,
+.defaultColor__4bd52.text-md\/normal_cf4812.keybindMessage__740f2,
+/* extra small body text */
+.text-xs\/normal_cf4812 {
+  text-transform: lowercase !important;
+}
+  
+/* keybinds */
+.defaultKeybindGroup__740f2,
+.defaultKeybind__740f2,
+.defaultKeybindShortcutGroup__740f2,
+.combo__61c93,
+.key__61c93 {
+  text-transform: lowercase !important;
+}
+  
+/* game detection */
+.gameName_cc46f0,
+.lastPlayed_cc46f0 {
+  text-transform: lowercase !important;
+}
+
+/* group / section headers */
+.text-xxs\/bold_cf4812.groupHeader__0624f,
+.text-xs\/medium_cf4812,
+/* name headers */
+.name__20a53 {
+  text-transform: lowercase !important;
+}
+  
+/* exceptions */
+  
+/* messages */
+[role="article"], /* message container */
+[class*="message"], [class*="markup"], [class*="content"], [class*="attachment"],
+[class*="spoilerText"], [class*="repliedText"],
+[class*="threadMessage"], [class*="threadContent"] {
+  text-transform: none !important;
+}
+  
+/* user identity */
+[class*="username"], [class*="nickname"], [class*="nameTag"],
+[class*="discriminator"] {
+  text-transform: none !important;
+}
+  
+/* server headers */
+[aria-label*="server"], [aria-label*="guild"], [aria-label*="channel"],
+[class*="guildName"], [class*="serverName"], [class*="channelName"],
+[class*="categoryName"], [class*="threadsHeader"], [class*="topic"],
+.guildsList__7db08,
+.guildsList__7db08 * {
+  text-transform: none !important;
+}
+  
+/* user panel */
+[class*="status"], [class*="presence"], [class*="activity"], [class*="activityText"],
+[class*="aboutMe"], [class*="bio"], [class*="profileBio"], [class*="note"],
+[class*="customStatus"], [class*="userStatus"] {
+  text-transform: none !important;
+}
+  
+/* emojis and stickers */
+[class*="emoji"], [class*="emojiName"], [class*="emojiPicker"],
+[class*="sticker"], [class*="stickerName"], [class*="stickerPicker"],
+[class*="reaction"], [class*="reactionTooltip"] {
+  text-transform: none !important;
+}
+  
+/* list names */
+[role="treeitem"], [role="listitem"],
+[class*="channel"], [class*="privateChannel"], [class*="dmUsername"] {
+  text-transform: none !important;
+}
+  
+/* editable fields */
+input, textarea, [role="textbox"], [contenteditable="true"] {
+  text-transform: none !important;
+}
+  
+/* search results */
+[class*="autocomplete"], [class*="searchResults"], [class*="jumpToPresentBar"],
+[class*="mention"], [class*="pill"], [class*="chipUser"] {
+  text-transform: none !important;
+}
+  
+/* user-facing */
+:where(
+  [data-user-id],
+  [data-list-item-id],
+  [class*="userPopout"],
+  [class*="profileCard"]
+) {
+  text-transform: none !important;
+}
+  
+/* better discord settings */
+.bd-settings .bd-description,
+.bd-settings code,
+.bd-settings pre {
+  text-transform: none !important;
+}
+/* override for better discord */
+.bd-setting-note {
+  text-transform: lowercase !important;
+}
