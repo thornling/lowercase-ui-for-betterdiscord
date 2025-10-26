@@ -4,7 +4,7 @@
  * @version 1.0.0
  * @description makes discord ui lowercase but keeps user and server info normal
  * @source https://github.com/thornling/lowercase-ui-for-betterdiscord
- * @updateUrl https://github.com/thornling/lowercase-ui/raw/main/lowercase-ui.theme.css
+ * @updateUrl https://raw.githubusercontent.com/thornling/lowercase-ui-for-betterdiscord/refs/heads/main/bd-lowercase-ui.theme.css
  * @note this theme is designed for betterdiscord. 
  *       install betterdiscord first, then place this file in your themes folder.
  */
@@ -219,4 +219,5 @@ input, textarea, [role="textbox"], [contenteditable="true"] {
 /* override for better discord */
 .bd-setting-note {
   text-transform: lowercase !important;
+
 }
