@@ -1,173 +1,149 @@
 /**
  * @name lowercase ui for betterdiscord
  * @author thornling
- * @version 1.1.0
- * @description makes discord ui lowercase but keeps user-input text normal
+ * @version 1.2.0
+ * @description makes discord ui lowercase
  * @source https://github.com/thornling/lowercase-ui-for-betterdiscord
  * @updateUrl https://raw.githubusercontent.com/thornling/lowercase-ui-for-betterdiscord/refs/heads/main/bd-lowercase-ui.theme.css
- * @note this theme is designed for betterdiscord. 
- *       install betterdiscord first, then place this file in your themes folder.
+ * @note see plugin for more options https://github.com/thornling/lowercase-ui-plugin
  */
 
-/* ui lowercase */
+/* lowercase ui */
 
-/* containers + layout */
-[class^="app-"], [class^="layers-"], [class^="container-"],
-[class^="content-"], [class^="sidebar-"], [class^="toolbar-"],
-[class^="header-"], [class^="title-"], [class^="subtitle-"],
-[class^="label-"], [class^="form-"], [class^="settings-"],
-[class*="menu"], [class*="contextMenu"], [class*="scroller"],
-[class*="tabBar"], [class*="searchBar"], [class*="notice"],
-[class*="toast"], [class*="breadcrumb"], [class*="keybind"],
-[class*="select"], [class*="dropdown"],
-[class*="modal"], [class*="popout"], [class*="panel"], [class*="card"],
+/* layout */
+[class^="app-"],
+[class^="layers-"],
+[class^="container-"],
+[class^="content-"],
+[class^="sidebar-"],
+[class^="toolbar-"],
+[class*="scroller"],
 
-/* tab bar items */
-[class*="tabBarItem"], [class*="guildTabBarItem"], [class*="item"], [class*="brand"],
+/* navigation */
+[class*="tabBar"],
+[class*="tabBarItem"],
+[class*="guildTabBarItem"],
+[class*="item"],
+[class*="brand"],
+[class*="privateChannels"] [class*="name"],
+[class*="privateChannels"] [class*="channel"],
+[class*="privateChannelsHeaderContainer"],
+.friendsButtonContainer__35e86 .name__20a53,
+.friendsButtonContainer__35e86 .overflow__82b15,
 
-/* inputs + placeholders */
-input::placeholder, [class*="input"],
-
-/* buttons */
-button, select, [role="button"],
-[class*="button"], [class*="btn"], [class*="cta"],
-[class*="pill"], [class*="chip"],
-[class*="segmented"], [class*="switch"], [class*="toggle"],
-[class*="radio"], [class*="checkbox"],
-[class*="contents"], [class*="colorBrand"], [class*="sizeSmall"], [class*="grow"],
+/* inputs + buttons */
+input::placeholder,
+[class*="input"],
+button,
+select,
+[role="button"],
+[class*="button"],
+[class*="btn"],
+[class*="cta"],
+[class*="pill"],
+[class*="chip"],
+[class*="segmented"],
+[class*="switch"],
+[class*="toggle"],
+[class*="radio"],
+[class*="checkbox"],
+[class*="contents"],
+[class*="colorBrand"],
+[class*="sizeSmall"],
+[class*="grow"],
 
 /* headings + labels */
+[class^="header-"],
+[class^="title-"],
+[class^="subtitle-"],
 h1, h2, h3, h4, h5, h6,
-[class*="heading"], [class*="sectionTitle"],
-[class*="settingItemName"], [class*="settingItemDescription"],
-label, [class*="subtext"], [class*="helperText"],
-[class*="fieldTitle"], [class*="legend"],
+[class*="heading"],
+[class*="sectionTitle"],
+[class*="groupHeader"],
+[class*="settingItemName"],
+[class*="settingItemDescription"],
+label,
+[class*="subtext"],
+[class*="helperText"],
+[class*="fieldTitle"],
+[class*="legend"],
 [class*="text-md"][class*="semibold"],
 [class*="text-md"][class*="medium"],
 [class*="text-sm"][class*="semibold"],
 [class*="text-xs"][class*="semibold"],
 [class*="text-xs"][class*="normal"],
 [class*="text__0d0f9"],
+[class*="text__35859"],
 .colorSwatchLabel__04485,
 .info__88a69,
 [class*="value"],
-[class*="eyebrow"], [data-text-variant="eyebrow"],
+[class*="eyebrow"],
+[data-text-variant="eyebrow"],
 
-/* account settings + field headers */
-[class*="fieldTitle"], [class*="labelContainer"], [class*="description"],
+/* overlays */
+[class*="modal"],
+[class*="popout"],
+[class*="panel"],
+[class*="card"],
 
-/* security + auth sections */
-[class*="legend"], [class*="text__35859"],
+/* notices + tooltips */
+[class*="notice"],
+[class*="toast"],
+[class*="breadcrumb"],
+[class*="keybind"],
+[class*="tooltip"],
+[role="tooltip"],
+[class*="formText"],
+[class*="formNoticeBody"],
+[class*="giftText"],
+[class*="keybindMessage"],
 
-/* tooltips */
-[class*="tooltip"], [role="tooltip"],
-
-/* betterdiscord settings text */
-.bd-text-normal,
-
-/* forms + notices */
-[class*="formText"], [class*="formNoticeBody"],
-[class*="giftText"], [class*="keybindMessage"],
-
-/* keybinds */
-[class*="defaultKeybindGroup"], [class*="defaultKeybind"],
-[class*="defaultKeybindShortcutGroup"], [class*="combo"], [class*="key"],
-
-/* game detection */
-[class*="gameName"], [class*="lastPlayed"],
-
-/* group + section headers */
-[class*="groupHeader"], [class*="sectionTitle"] {
+/* misc */
+[class*="defaultKeybindGroup"],
+[class*="defaultKeybind"],
+[class*="defaultKeybindShortcutGroup"],
+[class*="combo"],
+[class*="key"],
+[class*="gameName"],
+[class*="lastPlayed"],
+[class*="resultsGroup"] [class*="header"],
+[class*="resultsGroup"] [class*="headerText"],
+[class*="headerLabel"],
+[class*="categoryLabel"],
+[class*="guildSectionLabel"],
+[class*="jumpToPresentBar"],
+[class*="barButtonMain"],
+[class*="lineClamp1"],
+[class*="messagesWrapper"] [class*="eyebrow"],
+[class*="searchBar"] [class*="headerText"],
+.bd-text-normal {
   text-transform: lowercase !important;
 }
 
 /* exceptions */
 
-/* messages + markup */
-:where(
-  [role="article"],
-  [class*="message"],
-  [class*="markup"],
-  [class*="attachment"],
-  [class*="spoilerText"],
-  [class*="repliedText"],
-  [class*="threadMessage"],
-  [class*="threadContent"]
-),
+/* typed input */
+[role="textbox"][class*="slateTextArea"],
+[role="textbox"][class*="textArea"],
+.textarea__9daae,
+input.input__0f084[class*="input"][type="text"],
+.searchBar__97492 .public-DraftEditor-content,
+input.input_ac6cb0[type="text"],
 
-/* usernames + discriminators */
-:where([class*="username"], [class*="nickname"], [class*="nameTag"], [class*="discriminator"]),
+/* emoji + stickers */
+[class*="autocompleteRowHeading"],
+[class*="emojiName"],
+[class*="stickerNode"][aria-label],
+[class*="stickerAsset"][alt],
+div.wrapper__14245 > span.headerLabel__14245[class*="headerLabel"],
+button.emojiItem_fc7141.emojiItemMedium_fc7141[data-name][data-type="emoji"],
 
-/* user info rows */
-:where([class*="row"], [class*="userInfo"], [class*="text"]),
+/* tooltips + containers */
+[class*="reactionTooltip"],
+.wrapper__3412a,
 
-/* headers */
-:where([class*="headerTextContainer"], [class*="headerText"]),
-
-/* account connections */
-:where(.connectionAccountValue_c7f964),
-
-/* status + activity */
-:where(
-  [class*="status"], [class*="presence"], [class*="activity"], [class*="activityText"],
-  [class*="aboutMe"], [class*="bio"], [class*="profileBio"], [class*="note"],
-  [class*="customStatus"], [class*="userStatus"]
-),
-
-/* emoji + stickers + reactions */
-:where(
-  [class*="emoji"], [class*="emojiName"], [class*="emojiPicker"],
-  [class*="sticker"], [class*="stickerName"], [class*="stickerPicker"],
-  [class*="reaction"], [class*="reactionTooltip"]
-),
-
-/* inputs + textboxes */
-:where(input, textarea, [role="textbox"], [contenteditable="true"]),
-
-/* autocomplete + mentions */
-:where([class*="autocomplete"], [class*="searchResults"], [class*="jumpToPresentBar"], [class*="mention"], [class*="pill"], [class*="chipUser"]),
-
-/* user popouts + profiles */
-:where([data-user-id], [data-list-item-id], [class*="userPopout"], [class*="profileCard"]),
-
-/* betterdiscord settings code + pre */
-:where(.bd-settings .bd-description, .bd-settings code, .bd-settings pre),
-
-/* servers + guilds */
-[class*="guildName"],
-[class*="serverName"],
-.name_f37cb1,
-.header_f37cb1 .name_f37cb1,
-.title_c38106 .defaultColor__4bd52,
-.wrapper__7db08 .label__5a838,
-
-/* channels + threads + categories */
-[class*="channelName"],
-[class*="threadName"],
-[class*="categoryName"],
-[class*="threadsHeader"],
-[class*="topic"],
-.channelName_e2d7b8,
-.name__29444,
-
-/* events */
-.eventName_e2d7b8,
-
-/* direct messages */
-[class*="dmUsername"],
-
-/* roles + mentions */
-[class*="roleMention"],
-[class*="roleName"],
-[class*="mention"],
-
-/* empty channel welcome + description */
-.header__00de6,
-.description__00de6 {
+/* inspector titles */
+[class*="titlePrimary"][class*="text-md"][class*="semibold"],
+[class*="titleSecondary"][class*="text-xs"][class*="normal"] {
   text-transform: none !important;
-}
-
-/* betterdiscord final override */
-.bd-setting-note {
-  text-transform: lowercase !important;
 }
